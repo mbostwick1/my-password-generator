@@ -95,7 +95,7 @@ function generatePassword() {
     ) {
       alert("You must at least select one character type!");
     }
-   //If at least 1, start to generate password//
+   
     else {
       characterCon = true;
       // console.log("YAY!");
