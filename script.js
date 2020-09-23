@@ -66,25 +66,25 @@ function generatePassword() {
     // Ask user if generator should use lowercase and assign user input to variable //
     lowerCaseCon = confirm("Do you want to use lowercase letters?");
     if (lowerCaseCon) {
-      passwordCon += lowerCaseOpt;
+      passwordSet += lowerCaseOpt;
     }
 
     // Asking user if generator should use uppercase and assign user input to variable //
     upperCaseCon = confirm("Do you want to use uppercase letters?");
     if (upperCaseCon) {
-      passwordCon += upperCaseOpt;
+      passwordSet += upperCaseOpt;
     }
 
     // Asking user if generator should use numbers and assign user input to variable //
     numbersCon = confirm("Do you want to use numbers?");
     if (numbersCon) {
-      passwordCon += numbersOpt;
+      passwordSet += numbersOpt;
     }
 
     // Asking user if generator should use special characters and assign user input to variable //
     specialCharCon = confirm("Do you want to use special characters?");
     if (specialCharCon) {
-      passwordCon += specialCharOpt;
+      passwordSet += specialCharOpt;
     }
     //If at least 1, start to generate password//
     if (
@@ -111,7 +111,6 @@ function generatePassword() {
 
   for (i = 0; i < passwordLengthCon; i++) {
     userPasswordChar = Math.floor(Math.random() * userCharOpt);
-
     passwordCon += passwordSet[userPasswordChar];
   }
   // The user's generated password is returned and displayed //
