@@ -11,7 +11,6 @@ function writePassword() {
 
 function generatePassword() {
   // Variables for all characters options to generate in password//
-  var passwordLengthCon = 0;
 
   var lowerCaseOpt = "abcdefghijklmnopqrstuvwxyz";
   var upperCaseOpt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -87,8 +86,7 @@ function generatePassword() {
     if (specialCharCon) {
       passwordCon += specialCharOpt;
     }
-
-    //The user must select AT LEAST 1 form of variable for password, if none are selected alert user.//
+    //If at least 1, start to generate password//
     if (
       lowerCaseCon === false &&
       upperCaseCon === false &&
@@ -97,23 +95,27 @@ function generatePassword() {
     ) {
       alert("You must at least select one character type!");
     }
-
-    //If at least 1, start to generate password//
+    //The user must select AT LEAST 1 form of variable for password, if none are selected alert user.//
     else {
       characterCon = true;
-      console.log("YAY!");
+      // console.log("YAY!");
     }
   }
 
   // Password variables to incorporate user's input //
 
+  var userCharOpt = passwordSet.length;
+  var userPasswordChar;
 
-  
   // for loop to generate password //
 
+  for (i = 0; i < passwordLengthCon; i++) {
+    userPasswordChar = Math.floor(Math.random() * userCharOpt);
 
-
-  return "This will be replaced by my generated password";
+    passwordCon += passwordSet[userPasswordChar];
+  }
+  // The user's generated password is returned and displayed //
+  return passwordCon;
 }
 
 // Add event listener to generate button
