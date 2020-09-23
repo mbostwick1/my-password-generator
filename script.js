@@ -50,7 +50,7 @@ function generatePassword() {
     else {
       if (passwordLengthCon < 8 || passwordLengthCon > 128)
         alert(
-          "Your password must be at more than 8 and less than 128 characters!"
+          "Your password must be at least 8 and no more than 128 characters! Please try again!"
         );
       // If user selects anything other than a number, prompts user to select a number //
       else if (
@@ -60,6 +60,35 @@ function generatePassword() {
         alert("You must enter a whole number!");
     }
   }
+
+  // While loop to confirm if the user wants to use lowercase, uppercase, numbers, and/or special characters //
+
+  while (characterCon === false) {
+    // Ask user if generator should use lowercase and assign user input to variable //
+    lowerCaseCon = confirm("Do you want to use lowercase letters?");
+    if (lowerCaseCon) {
+      passwordCon += lowerCaseOpt;
+    }
+
+    // Asking user if generator should use uppercase and assign user input to variable //
+    upperCaseCon = confirm("Do you want to use uppercase letters?");
+    if (upperCaseCon) {
+      passwordCon += upperCaseOpt;
+    }
+
+    // Asking user if generator should use numbers and assign user input to variable //
+    numbersCon = confirm("Do you want to use numbers?");
+    if (numbersCon) {
+      passwordCon += numbersOpt;
+    }
+
+    // Asking user if generator should use special characters and assign user input to variable //
+    specialCharCon = confirm("Do you want to use special characters?");
+    if (specialCharCon) {
+      passwordCon += specialCharOpt;
+    }
+
+
 
   return "This will be replaced by my generated password";
 }
