@@ -11,7 +11,7 @@ function writePassword() {
 
 function generatePassword() {
   // Variables for all characters options to generate in password//
-  var passwordLength = 0;
+  var passwordLengthCon = 0;
 
   var lowerCaseOpt = "abcdefghijklmnopqrstuvwxyz";
   var upperCaseOpt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -88,8 +88,29 @@ function generatePassword() {
       passwordCon += specialCharOpt;
     }
 
+    //The user must select AT LEAST 1 form of variable for password, if none are selected alert user.//
+    if (
+      lowerCaseCon === false &&
+      upperCaseCon === false &&
+      numbersCon === false &&
+      specialCharCon === false
+    ) {
+      alert("You must at least select one character type!");
+    }
 
+    //If at least 1, start to generate password//
+    else {
+      characterCon = true;
+      console.log("YAY!");
+    }
   }
+
+  // Password variables to incorporate user's input //
+
+
+  
+  // for loop to generate password //
+
 
 
   return "This will be replaced by my generated password";
