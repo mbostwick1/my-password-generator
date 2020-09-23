@@ -86,7 +86,7 @@ function generatePassword() {
     if (specialCharCon) {
       passwordSet += specialCharOpt;
     }
-    //If at least 1, start to generate password//
+     //The user must select AT LEAST 1 form of variable for password, if none are selected alert user.// 
     if (
       lowerCaseCon === false &&
       upperCaseCon === false &&
@@ -95,7 +95,7 @@ function generatePassword() {
     ) {
       alert("You must at least select one character type!");
     }
-    //The user must select AT LEAST 1 form of variable for password, if none are selected alert user.//
+   //If at least 1, start to generate password//
     else {
       characterCon = true;
       // console.log("YAY!");
