@@ -20,7 +20,7 @@ function generatePassword() {
   var passwordSet = "";
   var passwordLengthCon = 0;
 
-  // Variables for user prompts/confirms //
+  // Variables for user character confirms //
   var lowerCaseCon;
   var upperCaseCon;
   var numbersCon;
@@ -46,13 +46,13 @@ function generatePassword() {
     if (passwordLengthCon === null) {
       return "You have cancelled. Please try again!";
     }
-    // If user selects number outside of 8 to 128, alert to select again.
+    // If user selects number outside of 8 to 128, alerts to select again.
     else {
       if (passwordLengthCon < 8 || passwordLengthCon > 128)
         alert(
           "Your password must be at least 8 and no more than 128 characters! Please try again!"
         );
-      // If user selects anything other than a number, prompts user to select a number //
+      // If user selects anything other than a number, alerts user to select a number //
       else if (
         isNaN(passwordLengthCon) ||
         Number.isInteger(+passwordLengthCon) === false
@@ -88,7 +88,7 @@ function generatePassword() {
       passwordCon += specialCharOpt;
     }
 
-    
+
   }
 
 
