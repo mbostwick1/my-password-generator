@@ -88,6 +88,8 @@ function generatePassword() {
       passwordCon += specialCharOpt;
     }
 
+    
+  }
 
 
   return "This will be replaced by my generated password";
